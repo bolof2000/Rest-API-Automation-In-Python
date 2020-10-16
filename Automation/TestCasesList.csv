@@ -1,0 +1,37 @@
+﻿Test Case Id,Test Case Name,Code Writen?,Recorded,Published U?,Code Writen,Recorded
+BACK-END,,,,,,
+User/Customers API,,,,,,
+TCID-29,Verify 'POST /customers' creates user with email and password only,,yes,,TRUE,TRUE
+TCID-30,Verify 'GET /customers' lists all users,,,,TRUE,TRUE
+TCID-47,Veiry 'create customer' failes if email exists,,,,TRUE,TRUE
+,,,,,,
+,,,,,,
+Products API,,,,,,
+TCID-24,Verify 'GET /products' does not return empty,,yes,,TRUE,TRUE
+TCID-25,Verify 'products/id' returns a product with the given id,,yes,,TRUE,TRUE
+TCID-26,Verify 'POST /products' creates a simple product,,,,TRUE,TRUE
+TCID-51,Verify  'List Products' with filter 'after',,,,TRUE,TRUE
+TCID-61,Verify update 'regular_price' updates 'price' field,,,,TRUE,FALSE
+TCID-63,Verify update 'sale_price > 0' will set field 'on_sale'=True,,,,TRUE,FALSE
+TCID-64,"Verify update 'sale_price="" ""' will set field 'on_sale'=Fale",,,,TRUE,FALSE
+TCID-65,Verify update 'sale_price' updates the 'sale_price' field,,,,TRUE,FALSE
+,,,,,,
+Order API,,,,,,
+TCID-48,Create a 'paid' order with 'guest' customer,,,,TRUE,TRUE
+TCID-49,Create a 'paid' order with 'new created' customer,,,,TRUE,TRUE
+TCID-55,Update order status to 'canceled',,,,TRUE,TRUE
+TCID-56,Update order status to 'completed,,,,TRUE,TRUE
+TCID-57,Update order status to 'on-hold',,,,TRUE,TRUE
+TCID-58,Update order status to random string,,,,TRUE,TRUE
+TCID-59,Update order 'customer_note',,,,TRUE,TRUE
+TCID-60,Order with 50% off coupon should reduce total by 50%,,,,TRUE,FALSE
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+Coupon API,,,,,,
+TCID-37,Verify 'POST /coupons' creates a new coupon with 'discount_type=percent',,yes,,TRUE,FALSE
+TCID-38,Verify 'POST /coupons' creates a new coupon with 'discount_type=fixed_cart',,yes,,TRUE,FALSE
+TCID-39,Verify 'POST /coupons' creates a new coupon with 'discount_type=fixed_product',,yes,,TRUE,FALSE
+TCID-40,Verify 'POST /coupons' creates a new coupon with 'discount_type=<invalid string>',,,,TRUE,FALSE
